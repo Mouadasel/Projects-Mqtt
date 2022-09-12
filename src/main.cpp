@@ -30,7 +30,7 @@ int value = 0;
 
 DHT dht(DHTPIN, DHTTYPE);
 
-int ledPin =4 ;
+int ledPin =17 ;
 
 
 void setupWifi(){
@@ -85,7 +85,7 @@ void reconnect(){
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("ESP32Client")) {
+    if (client.connect("ESP32")) {
       Serial.println("connected");
       // Subscribe
       client.subscribe("esp32/output");
